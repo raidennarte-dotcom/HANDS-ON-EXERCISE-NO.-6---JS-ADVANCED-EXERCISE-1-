@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Javascript Web Output #1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      fieldset {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 15px;
+        max-width: 600px;
+      }
+      legend {
+        font-weight: bold;
+      }
+      table {
+        border-collapse: collapse;
+        margin-bottom: 15px;
+      }
+      td {
+        padding: 4px 15px 4px 0px;
+        vertical-align: middle;
+      }
+      .even-label {
+        color: green;
+        font-weight: bold;
+      }
+      .odd-label {
+        color: blue;
+        font-weight: bold;
+      }
+      .action-btn {
+        margin-right: 5px;
+      }
+      .control-panel {
+        margin-top: 15px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      .summary-box {
+        font-weight: bold;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Javascript Web Output #1</h2>
+
+    <div style="margin-bottom: 15px">
+      <label>Insert any Positive Numbers:</label>
+      <input type="number" id="numInput" min="1" />
+    </div>
+
+    <div style="margin-bottom: 15px">
+      <button onclick="insertNumber()">Insert</button>
+      <button onclick="clearEntry()">Clear Entry</button>
+    </div>
+
+    <fieldset>
+      <legend>Inserted Numbers</legend>
+      <table id="numbersTable">
+        <!-- Dynamic rows will be inserted here -->
+      </table>
+
+      <div id="summarySection" class="summary-box">
+        <!-- Dynamic calculation outputs go here -->
+      </div>
+    </fieldset>
+
+    <div class="control-panel">
+      <button onclick="clearItems()">Clear Items</button>
+      <button onclick="getTotal()">Get Total</button>
+      <button onclick="identifyHighLow()">
+        Identify Highest and Lowest Number
+      </button>
+      <label for="sortSelect">Sort by:</label>
+      <select id="sortSelect" onchange="handleSort()">
+        <option value="">Please select</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
